@@ -1,5 +1,5 @@
 const axios = require('axios');
-const URL = `https://jsonplaceholder.typicode.com/users`
+const URL = `https://jsonplaceholder.typicode.com/users/`
 
 async function getUser(id){
     const url  = `${URL}/${id}`
@@ -7,9 +7,12 @@ async function getUser(id){
     return response.data;
 }
 
-getUser(2)
+//TEST FUNCTION
+/*getUser("")
 .then(function(resultado){
     console.log(resultado)
 }).catch(function(err){
     console.log("esse é o erro", err)
-})
+})*/
+
+module.exports = {getUser}
